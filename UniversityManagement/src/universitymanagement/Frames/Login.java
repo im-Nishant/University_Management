@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package universitymanagement.Frames;
-
+import java.sql.*;
 /**
  *
  * @author w0lf_GF
@@ -41,6 +41,11 @@ public class Login extends javax.swing.JFrame {
         setResizable(false);
 
         jButton1.setText("SignIn");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText(" Member     :");
 
@@ -121,6 +126,18 @@ public class Login extends javax.swing.JFrame {
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        String user = jTextField1.getText();
+        String passwd = jPasswordField1.getText();
+        try{
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/"+jComboBox1.getSelectedItem(), "User", "User");
+        }
+        catch(Exception e){
+            
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
