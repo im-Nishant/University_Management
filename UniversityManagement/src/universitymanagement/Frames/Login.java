@@ -148,6 +148,8 @@ public class Login extends javax.swing.JFrame {
             //Check uname and passwd
             if(result.next()){
                 this.hide();
+                Student_Frame s = new Student_Frame();
+                s.setVisible(true);
                 conn.close();
             }
             else{
