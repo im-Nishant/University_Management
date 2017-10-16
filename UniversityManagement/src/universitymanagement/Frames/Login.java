@@ -136,11 +136,27 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        String option = member.getSelectedItem().toString();
+        if(option==""){
+            message.setText("Select Member type");
+            return;
+        }
         String uname = uid.getText();
+        if(uname.isEmpty()){
+            message.setText("Enter UserID");
+            uid.requestFocus();
+            return;
+        }
         String passwd = password.getText();
+        if(passwd.isEmpty()){
+            message.setText("Enter Password");
+            password.requestFocus();
+            return;
+        }
+        
         try{
             //Connection to the database(Host)
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/"+member.getSelectedItem(),"User", "User");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/"+option,"User", "User");
             //Statement
             Statement stmt = conn.createStatement();
             //Get password for uname from database
@@ -148,9 +164,19 @@ public class Login extends javax.swing.JFrame {
             //Check uname and passwd
             if(result.next()){
                 this.hide();
-                Student_Frame s = new Student_Frame();
-                s.setVisible(true);
-                conn.close();
+                if(option=="Student"){
+                    Student_Frame s = new Student_Frame();
+                    s.setVisible(true);
+                }
+                else if(option=="Faculty"){
+                    Faculty_Frame f = new Faculty_Frame();
+                    f.setVisible(true);
+                }
+                else if(option=="Administrative"){
+                    Administrative_Frame a = new Administrative_Frame();
+                    a.setVisible(true);
+                }
+                
             }
             else{
                 message.setText("Invalid Credentials");
