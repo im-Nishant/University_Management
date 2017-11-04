@@ -37,6 +37,7 @@ public class Login extends javax.swing.JFrame {
         member = new javax.swing.JComboBox<>();
         password = new javax.swing.JPasswordField();
         message = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -69,13 +70,27 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setText("Exit");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+=======
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+>>>>>>> cc1c7da79e4bdf073f5bb511670a1db921349308
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
@@ -89,10 +104,22 @@ public class Login extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(uid, javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
                                     .addComponent(member, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(password, javax.swing.GroupLayout.Alignment.LEADING)))))
                     .addComponent(jButton1))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+=======
+                                    .addComponent(password, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(member, 0, 101, Short.MAX_VALUE))))
+                        .addContainerGap(20, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(23, 23, 23))))
+>>>>>>> cc1c7da79e4bdf073f5bb511670a1db921349308
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -118,7 +145,17 @@ public class Login extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton1)
+<<<<<<< HEAD
                 .addContainerGap(51, Short.MAX_VALUE))
+=======
+                .addGap(45, 45, 45)
+                .addComponent(jButton2)
+                .addGap(39, 39, 39))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(59, Short.MAX_VALUE))
+>>>>>>> cc1c7da79e4bdf073f5bb511670a1db921349308
         );
 
         pack();
@@ -134,11 +171,31 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        String option = member.getSelectedItem().toString();
+        if(option==""){
+            message.setText("Select Member type");
+            return;
+        }
         String uname = uid.getText();
+        if(uname.isEmpty()){
+            message.setText("Enter UserID");
+            uid.requestFocus();
+            return;
+        }
         String passwd = password.getText();
+        if(passwd.isEmpty()){
+            message.setText("Enter Password");
+            password.requestFocus();
+            return;
+        }
+        
         try{
             //Connection to the database(Host)
+<<<<<<< HEAD
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/"+member.getSelectedItem(),"root", "hello");
+=======
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/"+option,"User", "User");
+>>>>>>> cc1c7da79e4bdf073f5bb511670a1db921349308
             //Statement
             Statement stmt = conn.createStatement();
             //Get password for uname from database
@@ -146,9 +203,25 @@ public class Login extends javax.swing.JFrame {
             //Check uname and passwd
             if(result.next()){
                 this.hide();
+<<<<<<< HEAD
                 Student_Frame s = new Student_Frame(uname);
                 s.setVisible(true);
                 conn.close();
+=======
+                if(option=="Student"){
+                    Student_Frame s = new Student_Frame();
+                    s.setVisible(true);
+                }
+                else if(option=="Faculty"){
+                    Faculty_Frame f = new Faculty_Frame();
+                    f.setVisible(true);
+                }
+                else if(option=="Administrative"){
+                    Administrative_Frame a = new Administrative_Frame();
+                    a.setVisible(true);
+                }
+                
+>>>>>>> cc1c7da79e4bdf073f5bb511670a1db921349308
             }
             else{
                 message.setText("Invalid Credentials");
@@ -167,6 +240,11 @@ public class Login extends javax.swing.JFrame {
             uid.requestFocus();*/
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -205,6 +283,7 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
