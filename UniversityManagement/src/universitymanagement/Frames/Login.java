@@ -115,7 +115,7 @@ public class Login extends javax.swing.JFrame {
                             .addComponent(password)))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton1)
                 .addContainerGap(51, Short.MAX_VALUE))
@@ -146,7 +146,7 @@ public class Login extends javax.swing.JFrame {
             //Check uname and passwd
             if(result.next()){
                 this.hide();
-                Student_Frame s = new Student_Frame(uname);
+                Student_Frame s = new Student_Frame(result);
                 s.setVisible(true);
                 conn.close();
             }

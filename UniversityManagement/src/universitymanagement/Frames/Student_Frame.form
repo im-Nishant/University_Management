@@ -75,7 +75,7 @@
                           <Group type="102" attributes="0">
                               <Component id="jLabel1" min="-2" pref="115" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="32767" attributes="0"/>
-                              <Component id="jLabel4" min="-2" pref="266" max="-2" attributes="0"/>
+                              <Component id="name" min="-2" pref="266" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="11" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -88,19 +88,18 @@
                               <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="jLabel9" max="32767" attributes="0"/>
+                                      <Component id="dob" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jLabel8" min="-2" pref="77" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                                      <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                                      <Component id="bg" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLabel5" min="-2" pref="266" max="-2" attributes="0"/>
-                                          <Component id="jLabel6" min="-2" pref="258" max="-2" attributes="0"/>
-                                          <Component id="jLabel12" alignment="0" min="-2" pref="258" max="-2" attributes="0"/>
-                                          <Component id="jLabel13" alignment="0" min="-2" pref="258" max="-2" attributes="0"/>
+                                          <Component id="fname" min="-2" pref="266" max="-2" attributes="0"/>
+                                          <Component id="mname" min="-2" pref="258" max="-2" attributes="0"/>
+                                          <Component id="address" min="-2" pref="258" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
@@ -108,7 +107,7 @@
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
-                      <Component id="jLabel14" min="-2" pref="102" max="-2" attributes="0"/>
+                      <Component id="image" min="-2" pref="102" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -126,39 +125,37 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel1" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                                  <Component id="jLabel4" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                                  <Component id="name" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel2" min="-2" pref="28" max="-2" attributes="0"/>
-                                  <Component id="jLabel5" min="-2" pref="28" max="-2" attributes="0"/>
+                                  <Component id="fname" min="-2" pref="28" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel6" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                                  <Component id="mname" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                   <Component id="jLabel3" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                              <Component id="jLabel14" min="-2" pref="97" max="-2" attributes="0"/>
+                              <Component id="image" min="-2" pref="97" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace type="unrelated" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel8" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                           <Component id="jLabel7" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                          <Component id="jLabel9" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                          <Component id="jLabel10" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                          <Component id="dob" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                          <Component id="bg" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel11" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                          <Component id="jLabel12" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                          <Component id="address" alignment="3" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace type="unrelated" max="32767" attributes="0"/>
-                      <Component id="jLabel13" min="-2" pref="28" max="-2" attributes="0"/>
-                      <EmptySpace pref="218" max="32767" attributes="0"/>
+                      <EmptySpace pref="258" max="32767" attributes="0"/>
                       <Component id="printButton" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -188,17 +185,17 @@
                 <Property name="text" type="java.lang.String" value="Mother&apos;s Name:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel4">
+            <Component class="javax.swing.JLabel" name="name">
               <Properties>
                 <Property name="text" type="java.lang.String" value="..."/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel5">
+            <Component class="javax.swing.JLabel" name="fname">
               <Properties>
                 <Property name="text" type="java.lang.String" value="..."/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel6">
+            <Component class="javax.swing.JLabel" name="mname">
               <Properties>
                 <Property name="text" type="java.lang.String" value="..."/>
               </Properties>
@@ -213,12 +210,12 @@
                 <Property name="text" type="java.lang.String" value="Blood Gp:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel9">
+            <Component class="javax.swing.JLabel" name="dob">
               <Properties>
                 <Property name="text" type="java.lang.String" value="..."/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel10">
+            <Component class="javax.swing.JLabel" name="bg">
               <Properties>
                 <Property name="text" type="java.lang.String" value="x+"/>
               </Properties>
@@ -228,19 +225,14 @@
                 <Property name="text" type="java.lang.String" value="Address:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel12">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="..."/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel13">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="..."/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel14">
+            <Component class="javax.swing.JLabel" name="image">
               <Properties>
                 <Property name="text" type="java.lang.String" value="jLabel14"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="address">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="..."/>
               </Properties>
             </Component>
           </SubComponents>
