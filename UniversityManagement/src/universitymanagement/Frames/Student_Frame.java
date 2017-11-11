@@ -28,7 +28,7 @@ public class Student_Frame extends javax.swing.JFrame {
         bg.setText(result.getString("bloodgp"));
         address.setText(result.getString("address"));
         }
-        catch(Exception e)
+        catch(SQLException e)
         {
             
         }
@@ -262,7 +262,7 @@ public class Student_Frame extends javax.swing.JFrame {
         
         Login l = new Login();
         l.setVisible(true);
-        this.hide();
+        this.dispose();
     }//GEN-LAST:event_logoutButtonActionPerformed
 
     private void printButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_printButtonActionPerformed

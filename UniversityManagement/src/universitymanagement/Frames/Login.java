@@ -39,6 +39,7 @@ public class Login extends javax.swing.JFrame {
         message = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(658, 582));
 
         jLabel1.setMaximumSize(new java.awt.Dimension(2147483647, 2147483647));
 
@@ -78,7 +79,7 @@ public class Login extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(message, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
@@ -99,8 +100,8 @@ public class Login extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(51, Short.MAX_VALUE)
-                        .addComponent(message, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(message, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -118,7 +119,7 @@ public class Login extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton1)
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -154,13 +155,12 @@ public class Login extends javax.swing.JFrame {
 
         try{
             //Connection to the database(Host)
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/"+option,"User", "User");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/"+option,"root", "hello");
             //Statement
             Statement stmt = conn.createStatement();
             //Get password for uname from database
 
-            ResultSet result = stmt.executeQuery("Select * from student_info where user_id =\""+uname+"\" and passwd= binary \""+passwd+"\";");
-
+            ResultSet result = stmt.executeQuery("Select * from "+option.toLowerCase()+"_info where user_id =\""+uname+"\" and passwd=\""+passwd+"\";");
             //Check uname and passwd
             if(result.next()){
                 this.hide();
@@ -169,11 +169,11 @@ public class Login extends javax.swing.JFrame {
                     s.setVisible(true);
                 }
                 else if(option=="Faculty"){
-                    Faculty_Frame f = new Faculty_Frame();
+                    Faculty_Frame f = new Faculty_Frame(result);
                     f.setVisible(true);
                 }
                 else if(option=="Administrative"){
-                    Administrative_Frame a = new Administrative_Frame();
+                    Administrative_Frame a = new Administrative_Frame(result);
                     a.setVisible(true);
                 }
                 
