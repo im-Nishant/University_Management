@@ -51,7 +51,7 @@ public class Login extends javax.swing.JFrame {
 
         jLabel2.setText(" Member   :");
 
-        jLabel3.setText("UserID :");
+        jLabel3.setText("UserID      :");
 
         jLabel4.setText("Password  :");
 
@@ -134,21 +134,49 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        String option = member.getSelectedItem().toString();
+        if(option==""){
+            message.setText("Select Member type");
+            return;
+        }
         String uname = uid.getText();
+        if(uname.isEmpty()){
+            message.setText("Enter UserID");
+            uid.requestFocus();
+            return;
+        }
         String passwd = password.getText();
+        if(passwd.isEmpty()){
+            message.setText("Enter Password");
+            password.requestFocus();
+            return;
+        }
+
         try{
             //Connection to the database(Host)
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/"+member.getSelectedItem(),"root", "hello");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/"+option,"User", "User");
             //Statement
             Statement stmt = conn.createStatement();
             //Get password for uname from database
+
             ResultSet result = stmt.executeQuery("Select * from student_info where user_id =\""+uname+"\" and passwd= binary \""+passwd+"\";");
+
             //Check uname and passwd
             if(result.next()){
                 this.hide();
-                Student_Frame s = new Student_Frame(result);
-                s.setVisible(true);
-                conn.close();
+                if(option=="Student"){
+                    Student_Frame s = new Student_Frame(result);
+                    s.setVisible(true);
+                }
+                else if(option=="Faculty"){
+                    Faculty_Frame f = new Faculty_Frame();
+                    f.setVisible(true);
+                }
+                else if(option=="Administrative"){
+                    Administrative_Frame a = new Administrative_Frame();
+                    a.setVisible(true);
+                }
+                
             }
             else{
                 message.setText("Invalid Credentials");

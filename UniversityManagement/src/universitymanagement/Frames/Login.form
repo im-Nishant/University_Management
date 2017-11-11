@@ -110,7 +110,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="UserID :"/>
+        <Property name="text" type="java.lang.String" value="UserID      :"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
