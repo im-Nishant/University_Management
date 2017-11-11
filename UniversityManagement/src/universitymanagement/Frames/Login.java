@@ -142,7 +142,7 @@ public class Login extends javax.swing.JFrame {
             //Statement
             Statement stmt = conn.createStatement();
             //Get password for uname from database
-            ResultSet result = stmt.executeQuery("Select * from student_info where user_id =\""+uname+"\" and passwd=\""+passwd+"\";");
+            ResultSet result = stmt.executeQuery("Select * from student_info where user_id =\""+uname+"\" and passwd= binary \""+passwd+"\";");
             //Check uname and passwd
             if(result.next()){
                 this.hide();
