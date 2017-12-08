@@ -22,6 +22,7 @@ public class Administrative_Frame extends javax.swing.JFrame {
         result = res;
         try {
             jLabel1.setText("Logged in as "+result.getString("user_id"));
+      
         } catch (SQLException ex) {
             Logger.getLogger(Administrative_Frame.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -37,23 +38,76 @@ public class Administrative_Frame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        addInfoBox = new javax.swing.JDialog();
+        addstu = new javax.swing.JDialog();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        stuname = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        stuf = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        stum = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        studate = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        stubg = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        stuadd = new javax.swing.JTextField();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        stuid = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        stuPass = new javax.swing.JTextField();
+        mes1 = new javax.swing.JLabel();
+        updstu = new javax.swing.JDialog();
+        updstuid = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        updstuop = new javax.swing.JComboBox<>();
+        updstunew = new javax.swing.JTextField();
+        jButton14 = new javax.swing.JButton();
+        jButton15 = new javax.swing.JButton();
+        mes2 = new javax.swing.JLabel();
+        delstu = new javax.swing.JDialog();
+        jButton10 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        delstuid = new javax.swing.JTextField();
+        mes3 = new javax.swing.JLabel();
+        addfac = new javax.swing.JDialog();
+        jLabel16 = new javax.swing.JLabel();
+        facname = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        facpass = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        facqual = new javax.swing.JTextField();
+        facspec = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        facint = new javax.swing.JTextField();
+        jLabel21 = new javax.swing.JLabel();
+        facadd = new javax.swing.JTextField();
+        jLabel22 = new javax.swing.JLabel();
+        facmail = new javax.swing.JTextField();
+        jLabel23 = new javax.swing.JLabel();
+        facphone = new javax.swing.JTextField();
+        jButton18 = new javax.swing.JButton();
+        jButton19 = new javax.swing.JButton();
+        jLabel24 = new javax.swing.JLabel();
+        facid = new javax.swing.JTextField();
+        mes4 = new javax.swing.JLabel();
+        updfac = new javax.swing.JDialog();
+        jLabel15 = new javax.swing.JLabel();
+        updfacid = new javax.swing.JTextField();
+        updfacop = new javax.swing.JComboBox<>();
+        updfacnew = new javax.swing.JTextField();
+        mes5 = new javax.swing.JLabel();
+        jButton16 = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
+        delfac = new javax.swing.JDialog();
+        jLabel13 = new javax.swing.JLabel();
+        delfacid = new javax.swing.JTextField();
+        jButton12 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
+        mes6 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
@@ -67,44 +121,117 @@ public class Administrative_Frame extends javax.swing.JFrame {
         jButton9 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
 
-        addInfoBox.setSize(new java.awt.Dimension(900, 266));
+        addstu.setPreferredSize(new java.awt.Dimension(900, 400));
+        addstu.setResizable(false);
+        addstu.setSize(new java.awt.Dimension(900, 300));
 
         jLabel4.setText("Name :");
 
-        jTextField1.setText("Enter student name");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        stuname.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                stunameMouseClicked(evt);
+            }
+        });
+        stuname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                stunameActionPerformed(evt);
+            }
+        });
+        stuname.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                stunameKeyPressed(evt);
             }
         });
 
         jLabel5.setText("Father's Name :");
 
-        jTextField2.setText("Enter Father's Name");
+        stuf.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                stufMouseClicked(evt);
+            }
+        });
+        stuf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                stufActionPerformed(evt);
+            }
+        });
+        stuf.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                stufKeyPressed(evt);
+            }
+        });
 
         jLabel6.setText("Mother's Name :");
 
-        jTextField3.setText("Enter mother's name");
-        jTextField3.addMouseListener(new java.awt.event.MouseAdapter() {
+        stum.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField3MouseClicked(evt);
+                stumMouseClicked(evt);
             }
         });
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        stum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                stumActionPerformed(evt);
+            }
+        });
+        stum.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                stumKeyPressed(evt);
             }
         });
 
         jLabel7.setText("Date of Birth :");
 
-        jTextField4.setText("YYYY-MM-DD");
+        studate.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                studateMouseClicked(evt);
+            }
+        });
+        studate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                studateActionPerformed(evt);
+            }
+        });
+        studate.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                studateKeyPressed(evt);
+            }
+        });
 
         jLabel8.setText("Blood Grp :");
 
+        stubg.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                stubgMouseClicked(evt);
+            }
+        });
+        stubg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                stubgActionPerformed(evt);
+            }
+        });
+        stubg.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                stubgKeyPressed(evt);
+            }
+        });
+
         jLabel9.setText("Address :");
 
-        jTextField6.setText("Enter permanent address");
+        stuadd.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                stuaddMouseClicked(evt);
+            }
+        });
+        stuadd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                stuaddActionPerformed(evt);
+            }
+        });
+        stuadd.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                stuaddKeyPressed(evt);
+            }
+        });
 
         jButton6.setText("OK");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -113,7 +240,7 @@ public class Administrative_Frame extends javax.swing.JFrame {
             }
         });
 
-        jButton7.setText("Cancel");
+        jButton7.setText("Clear");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
@@ -122,84 +249,572 @@ public class Administrative_Frame extends javax.swing.JFrame {
 
         jLabel10.setText("Entry No :");
 
-        javax.swing.GroupLayout addInfoBoxLayout = new javax.swing.GroupLayout(addInfoBox.getContentPane());
-        addInfoBox.getContentPane().setLayout(addInfoBoxLayout);
-        addInfoBoxLayout.setHorizontalGroup(
-            addInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(addInfoBoxLayout.createSequentialGroup()
+        stuid.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                stuidActionPerformed(evt);
+            }
+        });
+
+        jLabel12.setText("Password:");
+
+        stuPass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                stuPassActionPerformed(evt);
+            }
+        });
+
+        mes1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        javax.swing.GroupLayout addstuLayout = new javax.swing.GroupLayout(addstu.getContentPane());
+        addstu.getContentPane().setLayout(addstuLayout);
+        addstuLayout.setHorizontalGroup(
+            addstuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addstuLayout.createSequentialGroup()
                 .addGap(42, 42, 42)
-                .addGroup(addInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(addInfoBoxLayout.createSequentialGroup()
-                        .addGroup(addInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(addInfoBoxLayout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(addInfoBoxLayout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
-                        .addGroup(addInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(18, 18, 18)
-                        .addGroup(addInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(addInfoBoxLayout.createSequentialGroup()
-                                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel8)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(addInfoBoxLayout.createSequentialGroup()
-                        .addComponent(jLabel9)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 533, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel10)
+                .addGroup(addstuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(addstuLayout.createSequentialGroup()
+                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField7)))
-                .addGap(60, 60, 60))
-            .addGroup(addInfoBoxLayout.createSequentialGroup()
-                .addGap(337, 337, 337)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
-                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(stuPass, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(addstuLayout.createSequentialGroup()
+                        .addGroup(addstuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(addstuLayout.createSequentialGroup()
+                                .addComponent(jLabel9)
+                                .addGap(18, 18, 18)
+                                .addComponent(stuadd, javax.swing.GroupLayout.PREFERRED_SIZE, 533, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel10)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(addstuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(addstuLayout.createSequentialGroup()
+                                        .addComponent(jLabel8)
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addComponent(stuid)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addstuLayout.createSequentialGroup()
+                                .addGroup(addstuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(addstuLayout.createSequentialGroup()
+                                        .addComponent(jLabel4)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(stuname, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(addstuLayout.createSequentialGroup()
+                                        .addComponent(jLabel6)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(stum, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
+                                .addGroup(addstuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addGroup(addstuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(addstuLayout.createSequentialGroup()
+                                        .addComponent(studate, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(stubg, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(stuf, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(60, 60, 60))))
+            .addGroup(addstuLayout.createSequentialGroup()
+                .addGroup(addstuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(addstuLayout.createSequentialGroup()
+                        .addGap(339, 339, 339)
+                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(34, 34, 34)
+                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(addstuLayout.createSequentialGroup()
+                        .addGap(265, 265, 265)
+                        .addComponent(mes1, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        addInfoBoxLayout.setVerticalGroup(
-            addInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(addInfoBoxLayout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addGroup(addInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+        addstuLayout.setVerticalGroup(
+            addstuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addstuLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(mes1, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(addstuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(stuname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(stuf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(43, 43, 43)
-                .addGroup(addInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(addstuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(stum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(studate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(stubg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(40, 40, 40)
-                .addGroup(addInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(addstuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(stuadd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(addInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(stuid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 130, Short.MAX_VALUE)
+                .addGroup(addstuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(stuPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(16, 16, 16)
+                .addGroup(addstuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton6)
                     .addComponent(jButton7))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(21, 21, 21))
+        );
+
+        updstu.setSize(new java.awt.Dimension(400, 300));
+
+        updstuid.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updstuidActionPerformed(evt);
+            }
+        });
+
+        jLabel14.setText("UserId:");
+
+        updstuop.setMaximumRowCount(7);
+        updstuop.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "passwd", "name", "fname", "mname", "dob", "bloodgp", "address" }));
+
+        jButton14.setText("Update");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+
+        jButton15.setText("Clear");
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
+
+        mes2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        javax.swing.GroupLayout updstuLayout = new javax.swing.GroupLayout(updstu.getContentPane());
+        updstu.getContentPane().setLayout(updstuLayout);
+        updstuLayout.setHorizontalGroup(
+            updstuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(updstuLayout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addGroup(updstuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(updstuLayout.createSequentialGroup()
+                        .addComponent(mes2, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(updstuLayout.createSequentialGroup()
+                        .addGroup(updstuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(updstuLayout.createSequentialGroup()
+                                .addComponent(jButton14)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton15))
+                            .addGroup(updstuLayout.createSequentialGroup()
+                                .addComponent(updstuop, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(39, 39, 39)
+                                .addComponent(updstunew))
+                            .addGroup(updstuLayout.createSequentialGroup()
+                                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                                .addComponent(updstuid, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(58, 58, 58))))
+        );
+        updstuLayout.setVerticalGroup(
+            updstuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(updstuLayout.createSequentialGroup()
+                .addGap(83, 83, 83)
+                .addGroup(updstuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(updstuid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addGroup(updstuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(updstuop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(updstunew, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(36, 36, 36)
+                .addComponent(mes2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addGroup(updstuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton14)
+                    .addComponent(jButton15))
+                .addGap(31, 31, 31))
+        );
+
+        delstu.setSize(new java.awt.Dimension(400, 300));
+
+        jButton10.setText("Delete");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+
+        jButton11.setText("Clear");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+
+        jLabel11.setText("UserId:");
+
+        mes3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        javax.swing.GroupLayout delstuLayout = new javax.swing.GroupLayout(delstu.getContentPane());
+        delstu.getContentPane().setLayout(delstuLayout);
+        delstuLayout.setHorizontalGroup(
+            delstuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(delstuLayout.createSequentialGroup()
+                .addGap(72, 72, 72)
+                .addGroup(delstuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(delstuLayout.createSequentialGroup()
+                        .addComponent(jLabel11)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
+                        .addComponent(delstuid, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(mes3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, delstuLayout.createSequentialGroup()
+                        .addComponent(jButton10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton11)))
+                .addGap(83, 83, 83))
+        );
+        delstuLayout.setVerticalGroup(
+            delstuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, delstuLayout.createSequentialGroup()
+                .addGap(57, 57, 57)
+                .addGroup(delstuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(delstuid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addComponent(mes3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(49, 49, 49)
+                .addGroup(delstuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton10)
+                    .addComponent(jButton11))
+                .addGap(71, 71, 71))
+        );
+
+        addfac.setSize(new java.awt.Dimension(378, 342));
+
+        jLabel16.setText("Name:");
+
+        facname.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                facnameActionPerformed(evt);
+            }
+        });
+
+        jLabel17.setText("Password:");
+
+        facpass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                facpassActionPerformed(evt);
+            }
+        });
+
+        jLabel18.setText("Qualification:");
+
+        facqual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                facqualActionPerformed(evt);
+            }
+        });
+
+        facspec.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                facspecActionPerformed(evt);
+            }
+        });
+
+        jLabel19.setText("Specialization:");
+
+        jLabel20.setText("Areas of Interest:");
+
+        facint.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                facintActionPerformed(evt);
+            }
+        });
+
+        jLabel21.setText("Address:");
+
+        facadd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                facaddActionPerformed(evt);
+            }
+        });
+
+        jLabel22.setText("Mail:");
+
+        facmail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                facmailActionPerformed(evt);
+            }
+        });
+
+        jLabel23.setText("Phone:");
+
+        jButton18.setText("Add");
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton18ActionPerformed(evt);
+            }
+        });
+
+        jButton19.setText("Clear");
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
+
+        jLabel24.setText("UserID:");
+
+        mes4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        javax.swing.GroupLayout addfacLayout = new javax.swing.GroupLayout(addfac.getContentPane());
+        addfac.getContentPane().setLayout(addfacLayout);
+        addfacLayout.setHorizontalGroup(
+            addfacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addfacLayout.createSequentialGroup()
+                .addGroup(addfacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(addfacLayout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addGroup(addfacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(addfacLayout.createSequentialGroup()
+                                .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(facname, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(facpass, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(addfacLayout.createSequentialGroup()
+                                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(facqual))
+                            .addGroup(addfacLayout.createSequentialGroup()
+                                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(facspec))
+                            .addGroup(addfacLayout.createSequentialGroup()
+                                .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(facint))
+                            .addGroup(addfacLayout.createSequentialGroup()
+                                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(43, 43, 43)
+                                .addComponent(facadd))
+                            .addGroup(addfacLayout.createSequentialGroup()
+                                .addGap(3, 3, 3)
+                                .addGroup(addfacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jButton18)
+                                    .addGroup(addfacLayout.createSequentialGroup()
+                                        .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(facmail, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(addfacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(addfacLayout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(facphone))
+                                    .addGroup(addfacLayout.createSequentialGroup()
+                                        .addGap(56, 56, 56)
+                                        .addComponent(jButton19)
+                                        .addGap(0, 0, Short.MAX_VALUE))))
+                            .addGroup(addfacLayout.createSequentialGroup()
+                                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(facid, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(addfacLayout.createSequentialGroup()
+                        .addGap(138, 138, 138)
+                        .addComponent(mes4, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(13, Short.MAX_VALUE))
+        );
+        addfacLayout.setVerticalGroup(
+            addfacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addfacLayout.createSequentialGroup()
+                .addGap(7, 7, 7)
+                .addComponent(mes4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(addfacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(facname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(facpass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22)
+                .addGroup(addfacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(facqual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22)
+                .addGroup(addfacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(facspec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22)
+                .addGroup(addfacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(facint, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22)
+                .addGroup(addfacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(facadd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22)
+                .addGroup(addfacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(addfacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(facphone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(addfacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(facmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(19, 19, 19)
+                .addGroup(addfacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(facid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(addfacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton18)
+                    .addComponent(jButton19))
+                .addContainerGap())
+        );
+
+        updfac.setSize(new java.awt.Dimension(400, 300));
+
+        jLabel15.setText("UserID:");
+
+        updfacid.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updfacidActionPerformed(evt);
+            }
+        });
+
+        updfacop.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "passwd", "name", "qualification", "specialization", "interest", "mail", "phone", "address" }));
+        updfacop.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updfacopActionPerformed(evt);
+            }
+        });
+
+        updfacnew.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updfacnewActionPerformed(evt);
+            }
+        });
+
+        jButton16.setText("Update");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
+
+        jButton17.setText("Clear");
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout updfacLayout = new javax.swing.GroupLayout(updfac.getContentPane());
+        updfac.getContentPane().setLayout(updfacLayout);
+        updfacLayout.setHorizontalGroup(
+            updfacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, updfacLayout.createSequentialGroup()
+                .addContainerGap(53, Short.MAX_VALUE)
+                .addGroup(updfacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(mes5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(updfacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, updfacLayout.createSequentialGroup()
+                            .addComponent(jButton16)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(updfacLayout.createSequentialGroup()
+                            .addGroup(updfacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(updfacop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(27, 27, 27)
+                            .addGroup(updfacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(updfacid)
+                                .addComponent(updfacnew, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(71, 71, 71))
+        );
+        updfacLayout.setVerticalGroup(
+            updfacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(updfacLayout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addGroup(updfacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(updfacid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(47, 47, 47)
+                .addGroup(updfacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(updfacop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(updfacnew, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(41, 41, 41)
+                .addComponent(mes5, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                .addGroup(updfacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton16)
+                    .addComponent(jButton17))
+                .addGap(27, 27, 27))
+        );
+
+        delfac.setSize(new java.awt.Dimension(400, 300));
+
+        jLabel13.setText("UserId:");
+
+        delfacid.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                delfacidActionPerformed(evt);
+            }
+        });
+
+        jButton12.setText("Delete");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+
+        jButton13.setText("Clear");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+
+        mes6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        javax.swing.GroupLayout delfacLayout = new javax.swing.GroupLayout(delfac.getContentPane());
+        delfac.getContentPane().setLayout(delfacLayout);
+        delfacLayout.setHorizontalGroup(
+            delfacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(delfacLayout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addGroup(delfacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(delfacLayout.createSequentialGroup()
+                        .addComponent(jButton12)
+                        .addGap(160, 160, 160)
+                        .addComponent(jButton13))
+                    .addComponent(mes6, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(delfacLayout.createSequentialGroup()
+                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(55, 55, 55)
+                        .addComponent(delfacid, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(72, Short.MAX_VALUE))
+        );
+        delfacLayout.setVerticalGroup(
+            delfacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(delfacLayout.createSequentialGroup()
+                .addGap(76, 76, 76)
+                .addGroup(delfacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(delfacid, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(48, 48, 48)
+                .addComponent(mes6, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                .addGroup(delfacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton12)
+                    .addComponent(jButton13))
+                .addGap(52, 52, 52))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(658, 582));
 
         jLabel1.setText("Logged in as administrator ");
 
@@ -222,14 +837,14 @@ public class Administrative_Frame extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText("Delete");
+        jButton3.setText("Update");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Update");
+        jButton4.setText("Delete");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -275,14 +890,19 @@ public class Administrative_Frame extends javax.swing.JFrame {
             }
         });
 
-        jButton9.setText("Delete");
+        jButton9.setText("Update");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
             }
         });
 
-        jButton5.setText("Update");
+        jButton5.setText("Delete");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -324,23 +944,24 @@ public class Administrative_Frame extends javax.swing.JFrame {
                         .addComponent(jButton1)
                         .addGap(67, 67, 67))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(59, Short.MAX_VALUE)
+                .addGap(59, 59, 59)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(111, 111, 111)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 110, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addGap(59, 59, 59))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(148, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton1)
+                        .addGap(69, 69, 69)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(114, Short.MAX_VALUE))
         );
 
         pack();
@@ -354,74 +975,401 @@ public class Administrative_Frame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-            // TODO add your handling code here: for faculty add.
-            
+        addfac.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:faculty delete.
+        updfac.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here: for faculty update.
+        delfac.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
+        updstu.setVisible(true);
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here: student add info.
-        addInfoBox.setVisible(true);
+        addstu.setVisible(true);
     }//GEN-LAST:event_jButton8ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void stunameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stunameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_stunameActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void stumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stumActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_stumActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here: cancel button
-        jTextField1.setText("");
-        jTextField2.setText("");
-        jTextField3.setText("");
-        jTextField4.setText("");
-        jTextField5.setText("");
-        jTextField6.setText("");
-        jTextField7.setText("");
+        stuname.setText("");
+        stuf.setText("");
+        stum.setText("");
+        studate.setText("");
+        stubg.setText("");
+        stuadd.setText("");
+        stuid.setText("");
+        stuPass.setText("");
+        mes1.setText("");
     }//GEN-LAST:event_jButton7ActionPerformed
 
-    private void jTextField3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField3MouseClicked
+    private void stumMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_stumMouseClicked
         // TODO add your handling code here:
-        jTextField3.setText("");
-    }//GEN-LAST:event_jTextField3MouseClicked
+        if(stum.getText().equals("Enter mother's name")){
+            stum.setText("");
+        }
+    }//GEN-LAST:event_stumMouseClicked
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         try {
             // TODO add your handling code here:Ok button pressed.
-            String uid = jTextField7.getText();
-            String passwd = "qwerty";
-            String name = jTextField1.getText();
-            String fname = jTextField2.getText();
-            String mname = jTextField3.getText();
-            String dob = jTextField4.getText();
-            String bg = jTextField5.getText();
-            String add = jTextField6.getText();
-            Connection c1 = DriverManager.getConnection("jdbc:mysql://localhost:3306/Student", "root", "hello");
+            String uid = stuid.getText();
+            String passwd = stuPass.getText();
+            String name = stuname.getText();
+            String fname = stuf.getText();
+            String mname = stum.getText();
+            String dob = studate.getText();
+            String b = stubg.getText();
+            String add = stuadd.getText();
+            Connection c1 = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo", "User", "User");
             Statement stmt = c1.createStatement();
-            String query = "insert into student_info values ('"+uid+"','"+passwd+"','"+name+"','"+fname+"','"+mname+"','"+dob+"','"+bg+"','"+add+"')";
+            String query = "insert into student_info values ('"+uid+"','"+passwd+"','"+name+"','"+fname+"','"+mname+"','"+dob+"','"+b+"','"+add+"')";
             //String query = "insert into student_info values("'+uid+'","'+passwd+'","'+name+'","'+fname'","'+mname+'","'+dob+'","'+bg+'","'+add'")";
             stmt.executeUpdate(query);
+            mes1.setText("Record Added");
+            stmt.close();
             c1.close();
-            this.setVisible(false);
+//            this.setVisible(false);
         } catch (SQLException ex) {
             Logger.getLogger(Administrative_Frame.class.getName()).log(Level.SEVERE, null, ex);
         }
         
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void stunameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_stunameMouseClicked
+        // TODO add your handling code here:
+        if(stuname.getText().equals("Enter student name")){
+            stuname.setText("");
+        }
+    }//GEN-LAST:event_stunameMouseClicked
+
+    private void stufActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stufActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_stufActionPerformed
+
+    private void studateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_studateActionPerformed
+
+    private void stubgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stubgActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_stubgActionPerformed
+
+    private void stuaddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stuaddActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_stuaddActionPerformed
+
+    private void stuidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stuidActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_stuidActionPerformed
+
+    private void stunameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_stunameKeyPressed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_stunameKeyPressed
+
+    private void stufKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_stufKeyPressed
+        // TODO add your handling code here:    
+    }//GEN-LAST:event_stufKeyPressed
+
+    private void stufMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_stufMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_stufMouseClicked
+
+    private void stumKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_stumKeyPressed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_stumKeyPressed
+
+    private void studateKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_studateKeyPressed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_studateKeyPressed
+
+    private void studateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_studateMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_studateMouseClicked
+
+    private void stubgKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_stubgKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_stubgKeyPressed
+
+    private void stubgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_stubgMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_stubgMouseClicked
+
+    private void stuaddKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_stuaddKeyPressed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_stuaddKeyPressed
+
+    private void stuaddMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_stuaddMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_stuaddMouseClicked
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        delstu.setVisible(true);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+        String id = delstuid.getText();
+        if(id.equals(""))
+        {
+            mes2.setText("Enter UserID");
+            delstuid.requestFocus();
+            return;
+        }
+        try{
+        
+            //Connection to the database(Host)
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo","User", "User");
+     
+            Statement stmt = conn.createStatement();
+            String temp = "delete from student_info where user_id='"+id+"';";
+            stmt.executeUpdate(temp);
+            stmt.close();
+            Statement stmt1 = conn.createStatement();
+            String temp1 = "delete from current where user_id='"+id+"';";
+            stmt1.executeUpdate(temp1);
+            stmt1.close();
+            Statement stmt2 = conn.createStatement();
+            String temp2 = "delete from performance where user_id='"+id+"';";
+            stmt2.executeUpdate(temp2);
+            stmt2.close();
+            
+            mes3.setText("Database Updated");
+        }
+        catch(SQLException ex){}
+        
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void stuPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stuPassActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_stuPassActionPerformed
+
+    private void delfacidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delfacidActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_delfacidActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        // TODO add your handling code here:
+        String id = delfacid.getText();
+        if(id.equals(""))
+        {
+            mes6.setText("Enter UserID");
+            delfacid.requestFocus();
+            return;
+        }
+        try{
+        
+            //Connection to the database(Host)
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo","User", "User");
+     
+            Statement stmt = conn.createStatement();
+            String temp = "delete from faculty_info where user_id='"+id+"';";
+            stmt.executeUpdate(temp);
+            stmt.close();
+            
+            mes3.setText("Database Updated");
+        }
+        catch(SQLException ex){}
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void updstuidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updstuidActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_updstuidActionPerformed
+
+    private void updfacidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updfacidActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_updfacidActionPerformed
+
+    private void updfacnewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updfacnewActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_updfacnewActionPerformed
+
+    private void updfacopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updfacopActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_updfacopActionPerformed
+
+    private void facnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_facnameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_facnameActionPerformed
+
+    private void facpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_facpassActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_facpassActionPerformed
+
+    private void facqualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_facqualActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_facqualActionPerformed
+
+    private void facspecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_facspecActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_facspecActionPerformed
+
+    private void facintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_facintActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_facintActionPerformed
+
+    private void facaddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_facaddActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_facaddActionPerformed
+
+    private void facmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_facmailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_facmailActionPerformed
+
+    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+        // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:Ok button pressed.
+            String uid = facid.getText();
+            String passwd = facpass.getText();
+            String name = facname.getText();
+            String qual = facqual.getText();
+            String spec = facspec.getText();
+            String AoI = facint.getText();
+            String mail = facmail.getText();
+            String add = facadd.getText();
+            String phone = facphone.getText();
+            Connection c2 = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo", "User", "User");
+            Statement stmt = c2.createStatement();
+            String query = "insert into faculty_info values ('"+uid+"','"+passwd+"','"+name+"','"+qual+"','"+spec+"','"+AoI+"','"+mail+"','"+phone+"','"+add+"')";
+            //String query = "insert into student_info values("'+uid+'","'+passwd+'","'+name+'","'+fname'","'+mname+'","'+dob+'","'+bg+'","'+add'")";
+            stmt.executeUpdate(query);
+            mes4.setText("Record Added");
+            stmt.close();
+            c2.close();
+//            this.setVisible(false);
+        } catch (SQLException ex) {
+            Logger.getLogger(Administrative_Frame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton18ActionPerformed
+
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+        // TODO add your handling code here:
+        facname.setText("");
+        facpass.setText("");
+        facqual.setText("");
+        facspec.setText("");
+        facint.setText("");
+        facadd.setText("");
+        facmail.setText("");
+        facphone.setText("");
+        mes4.setText("");
+        facid.setText("");
+    }//GEN-LAST:event_jButton19ActionPerformed
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        // TODO add your handling code here:
+        updstuid.setText("");
+        updstunew.setText("");
+        mes2.setText("");
+    }//GEN-LAST:event_jButton15ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+        delstuid.setText("");
+        mes3.setText("");
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        // TODO add your handling code here:
+        updfacid.setText("");
+        updfacnew.setText("");
+        mes5.setText("");
+    }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        // TODO add your handling code here:
+        delfacid.setText("");
+        mes6.setText("");
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        // TODO add your handling code here:
+        String id = updstuid.getText();
+        if(id.equals(""))
+        {
+            mes2.setText("Enter UserID");
+            updstuid.requestFocus();
+            return;
+        }
+        String s=updstuop.getSelectedItem().toString();
+        String newval = updstunew.getText();
+        if(newval.equals(""))
+        {
+            mes2.setText("Enter New Value");
+            updstunew.requestFocus();
+            return;
+        }
+        try{
+        
+            //Connection to the database(Host)
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo","User", "User");
+     
+            Statement stmt = conn.createStatement();
+            String temp = "update student_info set "+s+"='"+newval+"' where user_id='"+id+"';";
+            stmt.executeUpdate(temp);
+            stmt.close();
+            
+            mes2.setText("Database Updated");
+        }
+        catch(Exception ex){}
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        // TODO add your handling code here:
+        String id = updfacid.getText();
+        if(id.equals(""))
+        {
+            mes5.setText("Enter UserID");
+            updfacid.requestFocus();
+            return;
+        }
+        String s=updfacop.getSelectedItem().toString();
+        String newval = updfacnew.getText();
+        if(newval.equals(""))
+        {
+            mes5.setText("Enter New Value");
+            updfacnew.requestFocus();
+            return;
+        }
+        try{
+        
+            //Connection to the database(Host)
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo","User", "User");
+     
+            Statement stmt = conn.createStatement();
+            String temp = "update faculty_info set "+s+"='"+newval+"' where user_id='"+id+"';";
+            stmt.executeUpdate(temp);
+            stmt.close();
+            
+            mes5.setText("Database Updated");
+        }
+        catch(SQLException ex){}
+    }//GEN-LAST:event_jButton16ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -459,8 +1407,32 @@ public class Administrative_Frame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDialog addInfoBox;
+    private javax.swing.JDialog addfac;
+    private javax.swing.JDialog addstu;
+    private javax.swing.JDialog delfac;
+    private javax.swing.JTextField delfacid;
+    private javax.swing.JDialog delstu;
+    private javax.swing.JTextField delstuid;
+    private javax.swing.JTextField facadd;
+    private javax.swing.JTextField facid;
+    private javax.swing.JTextField facint;
+    private javax.swing.JTextField facmail;
+    private javax.swing.JTextField facname;
+    private javax.swing.JTextField facpass;
+    private javax.swing.JTextField facphone;
+    private javax.swing.JTextField facqual;
+    private javax.swing.JTextField facspec;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -471,7 +1443,21 @@ public class Administrative_Frame extends javax.swing.JFrame {
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -481,12 +1467,27 @@ public class Administrative_Frame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
+    private javax.swing.JLabel mes1;
+    private javax.swing.JLabel mes2;
+    private javax.swing.JLabel mes3;
+    private javax.swing.JLabel mes4;
+    private javax.swing.JLabel mes5;
+    private javax.swing.JLabel mes6;
+    private javax.swing.JTextField stuPass;
+    private javax.swing.JTextField stuadd;
+    private javax.swing.JTextField stubg;
+    private javax.swing.JTextField studate;
+    private javax.swing.JTextField stuf;
+    private javax.swing.JTextField stuid;
+    private javax.swing.JTextField stum;
+    private javax.swing.JTextField stuname;
+    private javax.swing.JDialog updfac;
+    private javax.swing.JTextField updfacid;
+    private javax.swing.JTextField updfacnew;
+    private javax.swing.JComboBox<String> updfacop;
+    private javax.swing.JDialog updstu;
+    private javax.swing.JTextField updstuid;
+    private javax.swing.JTextField updstunew;
+    private javax.swing.JComboBox<String> updstuop;
     // End of variables declaration//GEN-END:variables
 }
